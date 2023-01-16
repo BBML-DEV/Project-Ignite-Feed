@@ -1,0 +1,83 @@
+@use "../1-base/variables"
+
+.btn
+    background-color: variables.$green-color
+    color: variables.$gray-color-7
+    padding: 1rem
+    border-radius: 10px
+    transition: .5s
+    cursor: pointer
+    font-weight: bold
+    border: none
+
+    &:hover
+        background-color: variables.$green-light-color
+        color: variables.$white-color
+
+
+    &__profile
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background-color: transparent
+        border-radius: 10px
+        border: 1px solid variables.$green-color
+        color: variables.$green-color
+        padding: .8rem 2rem
+        transition: .5s
+        cursor: pointer
+        width: 100%
+
+        &:hover
+            background-color: variables.$green-color
+            color: variables.$gray-color-7
+            padding: .8rem 2rem
+            border-radius: 10px
+
+    &__delete
+        background-color: transparent
+        color: variables.$gray-color-5
+        border: none
+        transition: .2s
+        cursor: pointer
+        
+        &:hover
+            color: variables.$red-color
+
+        &:focus-within
+            outline: 0
+            border: 0
+
+    &__like
+        display: flex
+        align-items: center
+        gap: .5rem
+        color: variables.$gray-color-5
+        border: none
+        background-color: transparent
+        cursor: pointer
+        transition: .2s
+
+        span
+            color: variables.$gray-color-5
+            font-size: 1rem
+            transition: .2s
+
+            &::before
+                padding: 0 0.10rem
+                content: "\2022"
+
+        &:hover
+            color: variables.$white-color
+
+            span 
+                color: variables.$white-color
+
+        &:focus
+            color: variables.$green-color
+            border-radius: 8px
+            span
+                color: variables.$green-color
+            
+   
+
