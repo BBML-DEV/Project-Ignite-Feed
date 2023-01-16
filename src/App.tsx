@@ -3,8 +3,8 @@ import { PostContainer } from "./assets/components/postContainer/PostContainer"
 import { SideBar } from "./assets/components/sidebar/SideBar"
 import "./assets/styles/css/main.css"
 
-function App() {
 
+function App() {
   const posts = [
     {
       id: 1,
@@ -46,9 +46,9 @@ function App() {
           <main>
             {posts.map(Post => {
               return <PostContainer 
-              key={Post.id}
+                key={Post.id}
                 author={Post.author}
-                content={Post.content}
+                content={Post.content as []}
                 publishedAt={Post.publishedAt}
               />
             })}
